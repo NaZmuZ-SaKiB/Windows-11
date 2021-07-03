@@ -121,12 +121,20 @@ body{
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
+.file-explorer-max-open{
+    height : 'calc(100vh - 50px)';
+    top : 0;
+    transform : translate(-50%, 0) scale(1);
+}
 .file-explorer img{
     border-radius: 8px;
+    padding: 0;
+}
+.file-explorer.file-explorer-max-open img{
+    border-radius: 0;
 }
 .file-explorer span{
     display: inline-block;
-    border-top-right-radius: 8px;
     text-align: center;
     vertical-align: middle;
     height: 30px;
@@ -135,10 +143,47 @@ body{
     color: #a3a3a3;
     background-color: #f3f3f3;
     position: absolute;
+}
+.file-explorer #file-explorar-close{  
+    border-top-right-radius: 8px;  
     right: 0;
 }
-.file-explorer span:hover{
+.file-explorer.file-explorer-max-open  #file-explorar-close{
+    border-top-right-radius: 0px;
+}
+.file-explorer #file-explorar-close:hover{
     background-color: rgb(207, 0, 0);
     color: white;
     cursor: default;
+}
+
+.file-explorer #file-explorar-max{
+    right: 45px;
+}
+.file-explorer #file-explorar-max:hover{
+    cursor: default;
+    background-color: #e6e6e6;
+}
+.file-explorer #file-explorar-normal{
+    right: 45px;
+    font-size: 20px;
+    display: none;
+}
+.file-explorer.file-explorer-max-open #file-explorar-normal{
+    display: inline-block;
+}
+.file-explorer.file-explorer-max-open  #file-explorar-max{
+    display: none;
+}
+.file-explorer #file-explorar-normal:hover{
+    cursor: default;
+    background-color: #e6e6e6;
+}
+.file-explorer #file-explorar-min{
+    right: 90px;
+    font-size: 20px;
+}
+.file-explorer #file-explorar-min:hover{
+    cursor: default;
+    background-color: #e6e6e6;
 }
