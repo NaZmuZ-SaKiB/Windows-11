@@ -73,6 +73,17 @@ body{
 .common img{
     border-radius: 8px;
 }
+.start-file-icon{
+    position: absolute;
+    width: 95px;
+    height: 85px;
+    background-color: #f3f3f3;
+    top: 152px;
+    right: 123px;
+}
+.start-file-icon:hover{
+    background-color: #fff;
+}
 .start-menu-animation{
     top: 60.5%;
 }
