@@ -56,6 +56,11 @@ body{
     position: absolute;
     right: 0;
 }
+#file-start{
+    background-color: rgb(243, 243, 243);
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
 .common{
     position: absolute;
     left: 50%;
