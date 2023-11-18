@@ -1,0 +1,47 @@
+.startMenu {
+  position: absolute;
+  z-index: 1500;
+  left: 50%;
+  bottom: -150%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%);
+  transition: all 0.2s;
+
+  &.show {
+    bottom: 52px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  img {
+    border-radius: 0.3em;
+  }
+
+  .fileExplorerIcon {
+    position: absolute;
+    top: 23.5%;
+    right: 19.3%;
+    background-color: #f6f5f8;
+
+    &:hover {
+      background-color: #e8e7eb;
+      cursor: pointer;
+    }
+  }
+}
+
+.resetBackground {
+  position: absolute;
+  z-index: 1000;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
