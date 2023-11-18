@@ -1,6 +1,10 @@
 import cls from "classnames";
 import styles from "./startMenu.module.scss";
-import { startMenuOpen, toggleStartMenu } from "../../signals";
+import {
+  openFileExplorer,
+  startMenuOpen,
+  toggleStartMenu,
+} from "../../signals";
 
 const StartMenu = () => {
   return (
@@ -18,6 +22,7 @@ const StartMenu = () => {
       >
         <img src="/images/startmenu.webp" alt="start-menu" />
         <img
+          onClick={openFileExplorer}
           className={cls(styles.fileExplorerIcon)}
           src="/images/file-icon-startmenu.png"
           alt="file-explorer-icon"

@@ -1,6 +1,10 @@
 import cls from "classnames";
 import styles from "./searchMenu.module.scss";
-import { searchMenuOpen, toggleSearchMenu } from "../../signals";
+import {
+  openFileExplorer,
+  searchMenuOpen,
+  toggleSearchMenu,
+} from "../../signals";
 
 const SearchMenu = () => {
   return (
@@ -19,6 +23,7 @@ const SearchMenu = () => {
         <input type="text" />
         <img src="/images/searchMenu.webp" alt="search-menu" />
         <img
+          onClick={openFileExplorer}
           className={cls(styles.fileExplorerIcon)}
           src="/images/file-icon.webp"
           alt="file-explorer-icon-big"
