@@ -12,16 +12,16 @@ const Icons = () => {
   return (
     <ul className={cls(styles.icons)}>
       <li onClick={toggleStartMenu} className={cls(styles.icons__icon)}>
-        <img src="/images/start-icon.png" />
+        <img src="/images/icons/start.webp" />
       </li>
       <li onClick={toggleSearchMenu} className={cls(styles.icons__icon)}>
-        <img src="/images/search-icon.png" />
+        <img src="/images/icons/search.webp" />
       </li>
       <li className={cls(styles.icons__icon)}>
-        <img src="/images/task-view-icon.png" />
+        <img src="/images/icons/task-view.webp" />
       </li>
       <li className={cls(styles.icons__icon)}>
-        <img src="/images/widgets-icon.png" />
+        <img src="/images/icons/widgets.webp" />
       </li>
       <li
         onClick={fileExplorerIconHandle}
@@ -30,16 +30,16 @@ const Icons = () => {
             fileExplorerMinimized.value | fileExplorerOpen.value,
         })}
       >
-        <img src="/images/file-explorer-small.png" />
+        <img src="/images/icons/file-explorer-big.webp" />
       </li>
       <li className={cls(styles.icons__icon)}>
-        <img src="/images/edge-icon.png" />
+        <img src="/images/icons/edge-big.webp" />
       </li>
       <li className={cls(styles.icons__icon)}>
-        <img src="/images/vscode-icon.png" />
+        <img src="/images/icons/vs-code.webp" />
       </li>
       <li className={cls(styles.icons__icon)}>
-        <img src="/images/store-icon.png" />
+        <img src="/images/icons/store-big.webp" />
       </li>
     </ul>
   );

@@ -19,6 +19,7 @@
   &__icon {
     height: 40px;
     width: 40px;
+    padding: 5px;
     border-radius: 3px;
     border: 1px solid transparent;
     display: flex;
@@ -42,6 +43,7 @@
     img {
       transition: all 0.2s;
       display: inline-block;
+      width: 100%;
     }
   }
 }

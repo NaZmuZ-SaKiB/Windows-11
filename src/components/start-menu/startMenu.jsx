@@ -1,10 +1,11 @@
 import cls from "classnames";
 import styles from "./startMenu.module.scss";
-import {
-  openFileExplorer,
-  startMenuOpen,
-  toggleStartMenu,
-} from "../../signals";
+import { AiOutlineUser, AiOutlinePoweroff } from "react-icons/ai";
+
+import { startMenuOpen, toggleStartMenu } from "../../signals";
+import StartMenuApps from "./startMenuApps";
+import StartMenuBar from "./startMenuBar";
+import StartMenuDocs from "./startMenuDocs";
 
 const StartMenu = () => {
   return (
@@ -15,18 +16,25 @@ const StartMenu = () => {
           [styles.show]: startMenuOpen.value,
         })}
       ></div>
+      {/* Main */}
       <div
         className={cls(styles.startMenu, {
           [styles.show]: startMenuOpen.value,
         })}
       >
-        <img src="/images/startmenu.webp" alt="start-menu" />
-        <img
-          onClick={openFileExplorer}
-          className={cls(styles.fileExplorerIcon)}
-          src="/images/file-icon-startmenu.png"
-          alt="file-explorer-icon"
-        />
+        <StartMenuBar barTitle="Pinned" buttonTitle="All apps" />
+        <StartMenuApps />
+        <StartMenuBar barTitle="Recommended" buttonTitle="More" />
+        <StartMenuDocs />
+        <div className={cls(styles.startMenu__bottom)}>
+          <div className={cls(styles.startMenu__bottom__user)}>
+            <AiOutlineUser className={cls(styles.icon)} />
+            <span>SaKiB</span>
+          </div>
+          <div className={cls(styles.startMenu__bottom__powerButton)}>
+            <AiOutlinePoweroff className={cls(styles.icon)} />
+          </div>
+        </div>
       </div>
     </>
   );
