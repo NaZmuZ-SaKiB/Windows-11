@@ -1,7 +1,14 @@
 import cls from "classnames";
+
 import styles from "./searchMenu.module.scss";
+import SearchMenuInput from "./searchMenuInput";
+import SearchMenuNav from "./searchMenuNav";
+import SearchMenuTopApps from "./searchMenuTopApps";
+import SearchMenuRecentApps from "./searchMenuRecentApps";
+import SearchMenuQuickSearches from "./searchMenuQuickSearches";
+
 import {
-  openFileExplorer,
+  // openFileExplorer,
   searchMenuOpen,
   toggleSearchMenu,
 } from "../../signals";
@@ -15,19 +22,20 @@ const SearchMenu = () => {
           [styles.show]: searchMenuOpen.value,
         })}
       ></div>
+
+      {/* Main */}
       <div
         className={cls(styles.searchMenu, {
           [styles.show]: searchMenuOpen.value,
         })}
       >
-        <input type="text" />
-        <img src="/images/searchMenu.webp" alt="search-menu" />
-        <img
-          onClick={openFileExplorer}
-          className={cls(styles.fileExplorerIcon)}
-          src="/images/file-icon.webp"
-          alt="file-explorer-icon-big"
-        />
+        <SearchMenuInput />
+        <SearchMenuNav />
+        <SearchMenuTopApps />
+        <div className={cls(styles.searchMenu__bottom)}>
+          <SearchMenuRecentApps />
+          <SearchMenuQuickSearches />
+        </div>
       </div>
     </>
   );
