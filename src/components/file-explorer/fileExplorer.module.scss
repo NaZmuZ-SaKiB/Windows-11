@@ -180,6 +180,7 @@
 
           @media (max-width: 630px) {
             font-size: 10px;
+            padding: 0;
           }
         }
       }
@@ -198,6 +199,11 @@
           &:hover {
             color: black;
           }
+
+          @media (max-width: 630px) {
+            font-size: 0.9rem;
+            padding: 0 2px;
+          }
         }
       }
     }
@@ -212,6 +218,7 @@
 
       @media (max-width: 630px) {
         padding: 6px 5px;
+        width: 40%;
       }
 
       input {

@@ -11,6 +11,11 @@
   bottom: 55px;
   transform: translateX(-50%);
   transition: all 0.2s;
+  overflow: hidden;
+
+  @media (max-width: 500px) {
+    bottom: 45px;
+  }
 
   &__searchBox {
     display: flex;

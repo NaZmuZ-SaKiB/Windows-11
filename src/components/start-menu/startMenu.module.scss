@@ -10,6 +10,10 @@
   transform: translate(-50%);
   transition: all 0.2s;
 
+  @media (max-width: 500px) {
+    bottom: 45px;
+  }
+
   &__top {
     padding: 5% 8% 1.5%;
     font-size: 14px;
