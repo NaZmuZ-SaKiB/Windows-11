@@ -9,7 +9,9 @@ import FileExplorer from "./components/file-explorer/fileExplorer";
 function App() {
   return (
     <div className={cls(styles.body)}>
-      <FileExplorer />
+      <div className={styles.FileExplorer__container}>
+        <FileExplorer />
+      </div>
       <Taskbar />
       <StartMenu />
       <SearchMenu />

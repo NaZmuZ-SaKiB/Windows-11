@@ -8,3 +8,9 @@
   background-position: top;
   position: relative;
 }
+
+.FileExplorer__container {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
